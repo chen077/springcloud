@@ -1,0 +1,22 @@
+EUREKA SERVER       AP      自我保护机制，允许宕机
+ZOOKEEPER SERVER    CP      不允许
+CONSUL SERVER       CP      不允许
+CAP consistency一致, availability高可用, partition tolerance分区容错
+CAP THEOREM https://medium.com/system-design-blog/cap-theorem-1455ce5fc0a0
+CAP 一个分布式系统不可能同时很好的满足一致性，可用性和分区容错三个需求
+CA 单点集群 满足一致性，可用性系统，通常扩展性不强大
+CP 满足一致性，分区容错的形同，通常性能不是特别高
+AP 满足可用性，分区容错的系统，通常可能对一致性要求低    淘宝，京东
+CP 架构 当网络分区出错，为了保证一致性，就必须拒绝请求，否则无法保证一致性
+结论：违背了可用性A的要求，只满足一致性和分区容错CP
+当分区系统同步失败，某一variable在不同系统值不同时，返回错误、拒绝请求
+#########
+Ribbon###
+#########
+Spring Cloud Ribbon 是 基于NETFLIX RIBBON 实现的一套客户端 负载均衡的工具
+主要功能是提供客户端的软件负载均衡算法和服务调用
+
+Load Balance
+load balancing refers to the process of distributing a set of tasks over a set of resources, with the aim of making
+their overall processing more efficient
+

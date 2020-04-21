@@ -1,0 +1,12 @@
+###consul服务端口号
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-consumerconsul-order
+  cloud:
+    consul:
+      port: 32769
+      discovery:
+        service-name: ${spring.application.name}
